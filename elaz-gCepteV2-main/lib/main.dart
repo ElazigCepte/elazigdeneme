@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:tasarim_ornekleri/favorites.dart';
 import 'denemeSayfa.dart';
 import 'favorites_manager.dart';
+import 'hesabim.dart';
+import 'package:in_app_purchase/in_app_purchase.dart';
 
 void main() {
+  // in_app_purchase gereği bekleyen satın almalar etkinleştirilmeli
+  InAppPurchase.instance.enablePendingPurchases();
   runApp(const tasarim_ornekleri());
 }
 
@@ -220,7 +224,12 @@ class _HomePageState extends State<HomePage> {
               ),
               IconButton(
                 icon: const Icon(Icons.settings, color: AppColors.white),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HesabimPage()),
+                  );
+                },
               ),
             ],
           ),
