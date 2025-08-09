@@ -1,0 +1,23 @@
+name: tasarim_ornekleri
+publish_to: 'none'
+description: Elazığ Cepte - Flutter uygulaması
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  url_launcher: ^6.3.0
+  in_app_purchase: ^3.1.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/assets/
